@@ -62,7 +62,7 @@ class Cnn(nn.Module):
                                  nn.MaxPool2d(2))
         self.out = nn.Linear(32 * 7 * 7, 10)  # fully connected layer, output 10 classes
 
-        def forward(self,x):
+    def forward(self,x):
             x=self.conv1(x)
             x=self.conv2(x)
             x = x.view(x.size(0), -1)  # 展平多维的卷积图成 (batch_size, 32 * 7 * 7)
@@ -71,11 +71,11 @@ class Cnn(nn.Module):
 
 
 if __name__=='__main__':
-    hyper_para=model_hyper_para(down_mnist=True)
+    hyper_para=model_hyper_para()
     cnn=Cnn()
     train_loader,test_x,test_y=down_data(hyper_para)
 
-    optimizer=torch.optim.adam(cnn.parameters(),lr=hyper_para['Learning Rate'])
+    optimizer=torch.optim.Adam(cnn.parameters(),lr=hyper_para['Learning Rate'])
     loss_func=nn.CrossEntropyLoss()
 
     for epoch in range(hyper_para['Epoch']):
