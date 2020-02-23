@@ -22,3 +22,26 @@
 
 
 
+### Algorithm_diagram
+
+ **` `**  **` `** 《算法图解》一书中，部分章节python代码实现，包括以下内容：
+
+* 分而治之划分土地（land_division）
+
+* 快速排序（sorting）
+
+* 广度优先搜索（bfs）
+
+* dijkstra最短路径（dijkstra）
+
+* 贪婪算法求解集合覆盖问题（set_cover）
+
+* 动态规划求解背包问题（dynamic_plan）
+
+  一些内容详细博客说明：
+
+  [动态规划](https://blog.csdn.net/ha_____ha/article/details/104457800)
+
+   [土地划分](https://blog.csdn.net/ha_____ha/article/details/104248451)
+
+  
